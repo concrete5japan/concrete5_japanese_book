@@ -1,5 +1,2 @@
-concrete5/languages
-concrete5/LICENSE.TXT
-concrete5/robots.txt
-concrete5/index.php
-concrete5/INSTALL
+concrete5/config/site.php
+concrete5/files

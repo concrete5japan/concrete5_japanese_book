@@ -1,0 +1,661 @@
+<?xml version="1.0"?>
+<concrete5-cif version="1.0">
+    <blocktypes>
+        <blocktype handle="date_archive" package=""/>
+    </blocktypes>
+    <attributekeys>
+        <attributekey handle="tags" name="タグ" package="" searchable="1" indexed="1" type="select" category="collection">
+            <type allow-multiple-values="1" display-order="display_asc" allow-other-values="1">
+                <options>
+                    <option value="composer" is-end-user-added="1"/>
+                    <option value="hello" is-end-user-added="1"/>
+                    <option value="world" is-end-user-added="1"/>
+                    <option value="first post" is-end-user-added="1"/>
+                </options>
+            </type>
+        </attributekey>
+    </attributekeys>
+    <themes>
+        <theme handle="greek_yogurt" package="" activated="1"/>
+    </themes>
+    <pagetypes>
+        <pagetype handle="blog_entry" name="ブログ記事" internal="0" icon="template1.png" package="">
+            <composer method="PARENT" pagetype="" parent="{ccm:export:page:/blog}">
+                <items>
+                    <block type="image" name="ヘッダー画像" composer-template="header.php"/>
+                    <block type="image" name="サムネイル画像" composer-template="thumbnail.php"/>
+                    <block type="content" name="ブログ本文"/>
+                    <attributekey handle="tags"/>
+                </items>
+            </composer>
+            <page name="" path="" filename="" pagetype="blog_entry" description="" package="">
+                <attributes>
+                    <attributekey handle="tags"/>
+                </attributes>
+                <area name="Blog Post Header"/>
+                <area name="Main">
+                    <block type="content" name="ブログ本文" mc-block-id="0yueptBw">
+                        <data table="btContentLocal">
+                            <record>
+                                <content><![CDATA[<p>This is my first blog post.</p>]]></content>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+                <area name="Blog Post More"/>
+                <area name="Blog Post Footer"/>
+                <area name="FeaturedImage"/>
+                <area name="Sidebar">
+                    <block type="tags" name="" mc-block-id="wG4zxttW">
+                        <data table="btTags">
+                            <record>
+                                <title><![CDATA[Tags]]></title>
+                                <targetCID>{ccm:export:page:/blog/blog-archives}</targetCID>
+                                <displayMode><![CDATA[page]]></displayMode>
+                                <cloudCount><![CDATA[0]]></cloudCount>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+                <area name="ThumbnailImage"/>
+                <area name="HeaderImage"/>
+                <area name="Thumbnail Image">
+                    <block type="image" name="サムネイル画像" composer-template="thumbnail.php" mc-block-id="QCpfJ7BF">
+                        <data table="btContentImage">
+                            <record>
+                                <fID>{ccm:export:file:sh_thumbnail.jpg}</fID>
+                                <fOnstateID/>
+                                <maxWidth><![CDATA[0]]></maxWidth>
+                                <maxHeight><![CDATA[0]]></maxHeight>
+                                <externalLink><![CDATA[]]></externalLink>
+                                <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                <altText><![CDATA[]]></altText>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+                <area name="Header Image">
+                    <block type="image" name="ヘッダー画像" composer-template="header.php" mc-block-id="wLzzOzzD">
+                        <data table="btContentImage">
+                            <record>
+                                <fID>{ccm:export:file:europe_england_stonehenge.jpg}</fID>
+                                <fOnstateID/>
+                                <maxWidth><![CDATA[960]]></maxWidth>
+                                <maxHeight><![CDATA[212]]></maxHeight>
+                                <forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                <externalLink><![CDATA[]]></externalLink>
+                                <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                <altText><![CDATA[My concrete5 Blog]]></altText>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+            </page>
+        </pagetype>
+        <pagetype handle="full" name="全幅" internal="0" icon="main.png" package="">
+            <page name="" path="" filename="" pagetype="full" description="" package="">
+                <area name="HeaderImage"/>
+                <area name="Main"/>
+                <area name="Header Image">
+                    <block type="image" name="" mc-block-id="pn1zRqLs">
+                        <data table="btContentImage">
+                            <record>
+                                <fID>{ccm:export:file:northern_az_lake_powell_house_boats.jpg}</fID>
+                                <fOnstateID/>
+                                <maxWidth><![CDATA[960]]></maxWidth>
+                                <maxHeight><![CDATA[212]]></maxHeight>
+                                <forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                <externalLink><![CDATA[]]></externalLink>
+                                <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                <altText><![CDATA[]]></altText>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+            </page>
+        </pagetype>
+        <pagetype handle="left_sidebar" name="左サイドバー" internal="0" icon="template1.png" package="">
+            <page name="" path="" filename="" pagetype="left_sidebar" description="" package="">
+                <area name="HeaderImage"/>
+                <area name="Sidebar"/>
+                <area name="Main"/>
+                <area name="Header Image">
+                    <block type="image" name="" mc-block-id="EjT8GZha">
+                        <data table="btContentImage">
+                            <record>
+                                <fID>{ccm:export:file:europe_valencia_hemispheric.jpg}</fID>
+                                <fOnstateID/>
+                                <maxWidth><![CDATA[960]]></maxWidth>
+                                <maxHeight><![CDATA[212]]></maxHeight>
+                                <forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                <externalLink><![CDATA[]]></externalLink>
+                                <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                <altText><![CDATA[]]></altText>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+            </page>
+        </pagetype>
+        <pagetype handle="right_sidebar" name="右サイドバー" internal="0" icon="right_sidebar.png" package="">
+            <page name="" path="" filename="" pagetype="right_sidebar" description="" package="">
+                <area name="Header Image">
+                    <block type="image" name="" mc-block-id="v0zvw8ct">
+                        <data table="btContentImage">
+                            <record>
+                                <fID>{ccm:export:file:europe_rotterdam_port.jpg}</fID>
+                                <fOnstateID/>
+                                <maxWidth><![CDATA[960]]></maxWidth>
+                                <maxHeight><![CDATA[212]]></maxHeight>
+                                <forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                <externalLink><![CDATA[]]></externalLink>
+                                <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                <altText><![CDATA[]]></altText>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+                <area name="Main"/>
+                <area name="Sidebar"/>
+            </page>
+        </pagetype>
+    </pagetypes>
+    <stacks>
+        <stack name="Header Nav" type="global_area">
+            <area name="Main">
+                <block type="autonav" name="">
+                    <data table="btNavigation">
+                        <record>
+                            <orderBy><![CDATA[display_asc]]></orderBy>
+                            <displayPages><![CDATA[top]]></displayPages>
+                            <displayPagesCID/>
+                            <displayPagesIncludeSelf><![CDATA[0]]></displayPagesIncludeSelf>
+                            <displaySubPages><![CDATA[none]]></displaySubPages>
+                            <displaySubPageLevels><![CDATA[enough]]></displaySubPageLevels>
+                            <displaySubPageLevelsNum><![CDATA[0]]></displaySubPageLevelsNum>
+                            <displayUnavailablePages><![CDATA[0]]></displayUnavailablePages>
+                        </record>
+                    </data>
+                </block>
+            </area>
+        </stack>
+        <stack name="Side Nav">
+            <area name="Main">
+                <block type="content" name="">
+                    <data table="btContentLocal">
+                        <record>
+                            <content><![CDATA[<h3>リンク:</h3>]]></content>
+                            </record>
+                        </data>
+                    </block>
+                    <block type="autonav" name="">
+                        <data table="btNavigation">
+                            <record>
+                                <orderBy><![CDATA[display_asc]]></orderBy>
+                                <displayPages><![CDATA[second_level]]></displayPages>
+                                <displayPagesCID/>
+                                <displayPagesIncludeSelf><![CDATA[0]]></displayPagesIncludeSelf>
+                                <displaySubPages><![CDATA[all]]></displaySubPages>
+                                <displaySubPageLevels><![CDATA[all]]></displaySubPageLevels>
+                                <displaySubPageLevelsNum><![CDATA[0]]></displaySubPageLevelsNum>
+                                <displayUnavailablePages><![CDATA[0]]></displayUnavailablePages>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+            </stack>
+            <stack name="Site Name" type="global_area">
+                <area name="Main">
+                    <block type="content" name="">
+                        <data table="btContentLocal">
+                            <record>
+                                <content><![CDATA[<h1><a title="Home" 
+                                	href="{ccm:export:page:}"
+                                >{ccm:export:define:SITE}</a></h1>]]></content>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+            </stack>
+        </stacks>
+        <pages>
+            <page name="ホーム" path="" filename="" pagetype="right_sidebar" description="" package="">
+                <area name="Header">
+                    <block type="content" name="">
+                        <data table="btContentLocal">
+                            <record>
+                                <content><![CDATA[<h1>Welcome to concrete5 - an Open Source CMS</h1>]]></content>
+                            </record>
+                        </data>
+                    </block>
+                </area>
+                <area name="Sidebar">
+                    <block type="content" name="">
+                        <data table="btContentLocal">
+                            <record>
+                                <content><![CDATA[<h3>サイドバー</h3>]]></content>
+                                </record>
+                            </data>
+                        </block>
+                        <block type="content" name="">
+                            <data table="btContentLocal">
+                                <record>
+                                    <content><![CDATA[<p>concrete5ではあらゆるものがCMSを使って変更可能です。これはホームページのメインコンテンツから分離されたエリアです。<a title="Move blocks in concrete5" href="http://www.concrete5.org/documentation/general-topics/blocks-and-areas" target="_blank">ブロックをドラッグ・アンド・ドロップ</a>して自由に動かすことができます。</p>]]></content>
+                                </record>
+                            </data>
+                        </block>
+                    </area>
+                    <area name="Main">
+                        <block type="content" name="">
+                            <data table="btContentLocal">
+                                <record>
+                                    <content><![CDATA[<h2>concrete5へようこそ!</h2>
+                                        <p>concrete5は、WEBサイトを見たまま直接編集ができるコンテンツ・マネジメント・システムです。<a href="{ccm:export:page:/login}">ログイン</a>するとブロックと呼ばれるページの構成要素を変更したり追加できるようになります。</p>
+                                        <p>以下が簡単な操作方法へのリンクです：</p>
+                                        <ul>
+                                        <li><a title="ログイン・編集の基本" href="http://concrete5-japan.org/help/editing/login/" target="_blank">ページの編集方法</a></li>
+                                        <li><a href="http://concrete5-japan.org/help/editing/add-a-page/" target="_blank">新規ページ作成方法</a></li>
+                                        <li>いろいろな機能を持ったブロックを追加：<a href="http://www.youtube.com/watch?v=aZ6YfVvfybQ" target="_blank">フォーム</a></li>
+                                        <li>テーマやアドオンを<a href="http://concrete5-japan.org/help/editing/install_theme_and_blocks/" target="_blank">マーケットプレイスから簡単自動インストール</a></li>
+                                        </ul>
+                                        <p>このサイトに、concrete5について学ぶためのいろいろなサンプルをインストールしました。管理画面ボタンをクリックして<a href="{ccm:export:page:/dashboard/sitemap}">サイトマップ</a>にアクセスして、コンテンツを確認してみてください。不要な部分の削除もサイトマップから行えます。</p>]]></content>
+                                    </record>
+                                </data>
+                            </block>
+                        </area>
+                        <area name="HeaderImage"/>
+                        <area name="Header Image">
+                            <block type="image" name="">
+                                <data table="btContentImage">
+                                    <record>
+                                        <fID>{ccm:export:file:england_village.jpg}</fID>
+                                        <fOnstateID/>
+										<maxWidth><![CDATA[960]]></maxWidth>
+										<maxHeight><![CDATA[212]]></maxHeight>
+										<forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                        <externalLink><![CDATA[]]></externalLink>
+                                        <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                        <altText><![CDATA[]]></altText>
+                                    </record>
+                                </data>
+                            </block>
+                        </area>
+                    </page>
+			<page name="概要" path="/about" filename="" pagetype="left_sidebar" description="" package="">
+											<area name="Header">
+												<block type="content" name="">
+													<data table="btContentLocal">
+														<record>
+															<content><![CDATA[<h1>概要</h1>]]></content>
+														</record>
+													</data>
+												</block>
+											</area>
+											<area name="Sidebar">
+												<block type="core_stack_display" name="">
+													<stack><![CDATA[Side Nav]]></stack>
+												</block>
+											</area>
+											<area name="Main">
+												<block type="content" name="">
+													<data table="btContentLocal">
+														<record>
+															<content><![CDATA[<h2>さらに詳しく</h2>
+																<p><a title="concrete5 日本語公式サイト" href="http://concrete5-japan.org/" target="_blank">concrete5 日本語公式サイト</a>の<a href="http://concrete5-japan.org/help/" target="_blank">ヘルプ</a>や<a href="http://concrete5-japan.org/community/forums/" target="_blank">フォーラム</a>で、さらに詳しく知ることができます。<a title="concrete5 Content Management System" href="http://www.concrete5.org/" target="_blank">concrete5.org</a>の<a title="concrete5 marketplace" href="http://www.concrete5.org/marketplace/" target="_blank">マーケットプレイス</a>では、追加の<a title="Add-ons for concrete5" href="http://www.concrete5.org/marketplace/addons/" target="_blank">アドオン</a>や<a title="Themes for concrete5" href="http://www.concrete5.org/marketplace/themes/" target="_blank">テーマ</a>を探すことができます。</p>]]></content>
+															</record>
+														</data>
+													</block>
+												</area>
+												<area name="HeaderImage"/>
+												<area name="Header Image">
+													<block mc-block-id="EjT8GZha"/>
+												</area>
+											</page>
+			<page name="ゲストブック" path="/about/guestbook" filename="" pagetype="right_sidebar" description="" package="">
+				<area name="Header">
+					<block type="content" name="">
+						<data table="btContentLocal">
+							<record>
+								<content><![CDATA[<h1>ゲストブック</h1>]]></content>
+							</record>
+						</data>
+					</block>
+				</area>
+				<area name="Sidebar">
+					<block type="core_stack_display" name="">
+						<stack><![CDATA[Side Nav]]></stack>
+					</block>
+				</area>
+				<area name="Main">
+					<block type="guestbook" name="">
+						<data table="btGuestBook">
+							<record>
+								<requireApproval><![CDATA[0]]></requireApproval>
+								<title><![CDATA[コメントをどうぞ]]></title>
+								<dateFormat><![CDATA[Y年n月j日]]></dateFormat>
+								<displayGuestBookForm><![CDATA[1]]></displayGuestBookForm>
+								<displayCaptcha><![CDATA[1]]></displayCaptcha>
+								<authenticationRequired><![CDATA[0]]></authenticationRequired>
+								<notifyEmail><![CDATA[]]></notifyEmail>
+							</record>
+						</data>
+						<data table="btGuestBookEntries"/>
+					</block>
+				</area>
+				<area name="HeaderImage"/>
+				<area name="Header Image">
+					<block mc-block-id="v0zvw8ct"/>
+				</area>
+			</page>
+			<page name="お問い合わせ" path="/about/contact-us" filename="" pagetype="left_sidebar" description="" package="">
+				<area name="Header">
+					<block type="content" name="">
+						<data table="btContentLocal">
+							<record>
+								<content><![CDATA[<h1>お問い合わせ</h1>]]></content>
+							</record>
+						</data>
+					</block>
+				</area>
+				<area name="Sidebar">
+					<block type="core_stack_display" name="">
+						<stack><![CDATA[Side Nav]]></stack>
+					</block>
+				</area>
+				<area name="Main">
+					<block type="content" name="">
+						<data table="btContentLocal">
+							<record>
+								<content><![CDATA[<h2>お問い合わせ</h2>
+									<p>お問い合わせフォームの作成も簡単です。<a href="http://concrete5-japan.org/help/editing/add_a_form_block/" target="_blank">フォームブロックの使い方</a></p>]]></content>
+								</record>
+							</data>
+						</block>
+						<block type="form" name="">
+							<data table="btForm">
+								<record>
+									<questionSetId><![CDATA[1324322748]]></questionSetId>
+									<surveyName><![CDATA[お問い合わせ]]></surveyName>
+									<thankyouMsg><![CDATA[ありがとうございます！]]></thankyouMsg>
+									<notifyMeOnSubmission><![CDATA[0]]></notifyMeOnSubmission>
+									<recipientEmail><![CDATA[]]></recipientEmail>
+									<displayCaptcha><![CDATA[0]]></displayCaptcha>
+									<redirectCID/>
+								</record>
+							</data>
+							<data table="btFormQuestions">
+								<record>
+									<qID><![CDATA[5]]></qID>
+									<msqID><![CDATA[4]]></msqID>
+									<questionSetId><![CDATA[1324322748]]></questionSetId>
+									<question><![CDATA[お名前]]></question>
+									<inputType><![CDATA[field]]></inputType>
+									<options><![CDATA[]]></options>
+									<position><![CDATA[0]]></position>
+									<width><![CDATA[50]]></width>
+									<height><![CDATA[3]]></height>
+									<required><![CDATA[1]]></required>
+								</record>
+								<record>
+									<qID><![CDATA[6]]></qID>
+									<msqID><![CDATA[5]]></msqID>
+									<questionSetId><![CDATA[1324322748]]></questionSetId>
+									<question><![CDATA[Email:]]></question>
+									<inputType><![CDATA[email]]></inputType>
+									<options><![CDATA[]]></options>
+									<position><![CDATA[0]]></position>
+									<width><![CDATA[50]]></width>
+									<height><![CDATA[3]]></height>
+									<required><![CDATA[1]]></required>
+								</record>
+								<record>
+									<qID><![CDATA[7]]></qID>
+									<msqID><![CDATA[6]]></msqID>
+									<questionSetId><![CDATA[1324322748]]></questionSetId>
+									<question><![CDATA[お問い合わせ内容]]></question>
+									<inputType><![CDATA[radios]]></inputType>
+									<options><![CDATA[質問%%ご意見%%緊急%%挨拶%%その他]]></options>
+									<position><![CDATA[0]]></position>
+									<width><![CDATA[50]]></width>
+									<height><![CDATA[3]]></height>
+									<required><![CDATA[1]]></required>
+								</record>
+								<record>
+									<qID><![CDATA[8]]></qID>
+									<msqID><![CDATA[7]]></msqID>
+									<questionSetId><![CDATA[1324322748]]></questionSetId>
+									<question><![CDATA[メッセージ]]></question>
+									<inputType><![CDATA[text]]></inputType>
+									<options><![CDATA[]]></options>
+									<position><![CDATA[0]]></position>
+									<width><![CDATA[50]]></width>
+									<height><![CDATA[3]]></height>
+									<required><![CDATA[1]]></required>
+								</record>
+							</data>
+						</block>
+					</area>
+					<area name="HeaderImage"/>
+					<area name="Header Image">
+						<block mc-block-id="EjT8GZha"/>
+					</area>
+				</page>
+			<page name="検索" path="/search" filename="" pagetype="right_sidebar" description="" package="">
+					<area name="Header">
+						<block type="content" name="">
+							<data table="btContentLocal">
+								<record>
+									<content><![CDATA[<h1>サイトマップ</h1>]]></content>
+								</record>
+							</data>
+						</block>
+					</area>
+					<area name="Sidebar">
+						<block type="content" name="">
+							<data table="btContentLocal">
+								<record>
+									<content><![CDATA[<h3>サイトマップ</h3>]]></content>
+									</record>
+								</data>
+							</block>
+							<block type="autonav" name="">
+								<data table="btNavigation">
+									<record>
+										<orderBy><![CDATA[display_asc]]></orderBy>
+										<displayPages><![CDATA[top]]></displayPages>
+										<displayPagesCID/>
+										<displayPagesIncludeSelf><![CDATA[0]]></displayPagesIncludeSelf>
+										<displaySubPages><![CDATA[all]]></displaySubPages>
+										<displaySubPageLevels><![CDATA[all]]></displaySubPageLevels>
+										<displaySubPageLevelsNum><![CDATA[0]]></displaySubPageLevelsNum>
+										<displayUnavailablePages><![CDATA[0]]></displayUnavailablePages>
+									</record>
+								</data>
+							</block>
+						</area>
+						<area name="Main">
+							<block type="search" name="">
+								<data table="btSearch">
+									<record>
+										<title><![CDATA[サイト内検索]]></title>
+										<buttonText><![CDATA[検索]]></buttonText>
+										<baseSearchPath><![CDATA[]]></baseSearchPath>
+										<resultsURL><![CDATA[]]></resultsURL>
+									</record>
+								</data>
+							</block>
+						</area>
+						<area name="HeaderImage"/>
+						<area name="Header Image">
+							<block mc-block-id="v0zvw8ct"/>
+						</area>
+					</page>
+			<page name="ブログ" path="/blog" filename="" pagetype="right_sidebar" description="" package="">
+                                                        <attributes>
+                                                            <attributekey handle="tags"/>
+                                                        </attributes>
+                                                        <area name="HeaderImage"/>
+                                                        <area name="Main">
+                                                            <block type="page_list" name="" custom-template="blog_index_thumbnail.php">
+                                                                <data table="btPageList">
+                                                                    <record>
+                                                                        <num><![CDATA[12]]></num>
+                                                                        <orderBy><![CDATA[chrono_desc]]></orderBy>
+                                                                        <cParentID>{ccm:export:page:/blog}</cParentID>
+                                                                        <cThis><![CDATA[1]]></cThis>
+                                                                        <includeAllDescendents><![CDATA[0]]></includeAllDescendents>
+                                                                        <paginate><![CDATA[1]]></paginate>
+                                                                        <displayAliases><![CDATA[0]]></displayAliases>
+                                                                        <ctID>{ccm:export:pagetype:blog_entry}</ctID>
+                                                                        <rss><![CDATA[0]]></rss>
+                                                                        <rssTitle><![CDATA[]]></rssTitle>
+                                                                        <rssDescription><![CDATA[]]></rssDescription>
+                                                                        <truncateSummaries><![CDATA[1]]></truncateSummaries>
+                                                                        <displayFeaturedOnly><![CDATA[0]]></displayFeaturedOnly>
+                                                                        <truncateChars><![CDATA[128]]></truncateChars>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                        </area>
+                                                        <area name="Sidebar">
+                                                            <block type="content" name="">
+                                                                <data table="btContentLocal">
+                                                                    <record>
+                                                                        <content><![CDATA[<h3>タグ</h3>]]></content>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                            <block type="tags" name="">
+                                                                <data table="btTags">
+                                                                    <record>
+                                                                        <title><![CDATA[]]></title>
+                                                                        <targetCID>{ccm:export:page:/blog/blog-archives}</targetCID>
+                                                                        <displayMode><![CDATA[cloud]]></displayMode>
+                                                                        <cloudCount><![CDATA[0]]></cloudCount>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                            <block type="date_archive" name="">
+                                                                <data table="btDateArchive">
+                                                                    <record>
+                                                                        <title><![CDATA[アーカイブ]]></title>
+                                                                        <targetCID>{ccm:export:page:/blog/blog-archives}</targetCID>
+                                                                        <numMonths><![CDATA[12]]></numMonths>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                        </area>
+                                                        <area name="Header Image">
+                                                            <block mc-block-id="v0zvw8ct"/>
+                                                        </area>
+                                                    </page>
+            <page name="Hello World" path="/blog/hello-world" filename="" pagetype="blog_entry" description="これは最初のブログ記事です！" package="">
+                                                        <attributes>
+                                                            <attributekey handle="tags">
+                                                                <value>
+                                                                    <option>composer</option>
+                                                                    <option>hello</option>
+                                                                    <option>world</option>
+                                                                    <option>first post</option>
+                                                                </value>
+                                                            </attributekey>
+                                                        </attributes>
+                                                        <area name="Header Image">
+                                                            <block type="image" name="Header Image" composer-template="header.php">
+                                                                <data table="btContentImage">
+                                                                    <record>
+                                                                        <fID>{ccm:export:file:europe_england_stonehenge.jpg}</fID>
+                                                                        <fOnstateID/>
+																		<maxWidth><![CDATA[960]]></maxWidth>
+																		<maxHeight><![CDATA[212]]></maxHeight>
+																		<forceImageToMatchDimensions>1</forceImageToMatchDimensions>
+                                                                        <externalLink><![CDATA[]]></externalLink>
+                                                                        <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                                                        <altText><![CDATA[マイconcrete5ブログ]]></altText>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                        </area>
+                                                        <area name="Sidebar">
+                                                            <block mc-block-id="wG4zxttW"/>
+                                                        </area>
+                                                        <area name="Main">
+                                                            <block type="content" name="Blog Content">
+                                                                <data table="btContentLocal">
+                                                                    <record>
+                                                                        <content><![CDATA[<p>これはサンプルです！コンポーザーをつかって書くことができます！</p>]]></content>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                        </area>
+                                                        <area name="Thumbnail Image">
+                                                            <block type="image" name="Thumbnail Image" composer-template="thumbnail.php">
+                                                                <data table="btContentImage">
+                                                                    <record>
+                                                                        <fID>{ccm:export:file:sh_thumbnail.jpg}</fID>
+                                                                        <fOnstateID/>
+                                                                        <maxWidth><![CDATA[0]]></maxWidth>
+                                                                        <maxHeight><![CDATA[0]]></maxHeight>
+                                                                        <externalLink><![CDATA[]]></externalLink>
+                                                                        <internalLinkCID><![CDATA[0]]></internalLinkCID>
+                                                                        <altText><![CDATA[]]></altText>
+                                                                    </record>
+                                                                </data>
+                                                            </block>
+                                                        </area>
+                                                        <area name="Blog Post More"/>
+                                                        <area name="Blog Post Header"/>
+                                                        <area name="Blog Post Footer"/>
+                                                    </page>
+			<page name="ブログアーカイブ" path="/blog/blog-archives" filename="" pagetype="right_sidebar" description="" package="">
+                                                                <attributes>
+                                                                    <attributekey handle="exclude_nav">
+                                                                        <value><![CDATA[1]]></value>
+                                                                    </attributekey>
+                                                                    <attributekey handle="exclude_page_list">
+                                                                        <value><![CDATA[1]]></value>
+                                                                    </attributekey>
+                                                                    <attributekey handle="exclude_search_index">
+                                                                        <value><![CDATA[1]]></value>
+                                                                    </attributekey>
+                                                                    <attributekey handle="tags"/>
+                                                                </attributes>
+                                                                <area name="Header Image">
+                                                                    <block mc-block-id="v0zvw8ct"/>
+                                                                </area>
+                                                                <area name="Main">
+                                                                    <block type="search" name="">
+                                                                        <data table="btSearch">
+                                                                            <record>
+                                                                                <title><![CDATA[ブログ検索]]></title>
+                                                                                <buttonText><![CDATA[検索]]></buttonText>
+                                                                                <baseSearchPath><![CDATA[/blog]]></baseSearchPath>
+                                                                                <resultsURL><![CDATA[]]></resultsURL>
+                                                                            </record>
+                                                                        </data>
+                                                                    </block>
+                                                                </area>
+                                                                <area name="Sidebar">
+                                                                    <block type="tags" name="">
+                                                                        <data table="btTags">
+                                                                            <record>
+                                                                                <title><![CDATA[タグ]]></title>
+                                                                                <targetCID>{ccm:export:page:/blog/blog-archives}</targetCID>
+                                                                                <displayMode><![CDATA[cloud]]></displayMode>
+                                                                                <cloudCount><![CDATA[0]]></cloudCount>
+                                                                            </record>
+                                                                        </data>
+                                                                    </block>
+                                                                    <block type="date_archive" name="">
+                                                                        <data table="btDateArchive">
+                                                                            <record>
+                                                                                <title><![CDATA[アーカイブ]]></title>
+                                                                                <targetCID>{ccm:export:page:/blog/blog-archives}</targetCID>
+                                                                                <numMonths><![CDATA[12]]></numMonths>
+                                                                            </record>
+                                                                        </data>
+                                                                    </block>
+                                                                </area>
+                                                            </page>
+        </pages>
+   </concrete5-cif>
