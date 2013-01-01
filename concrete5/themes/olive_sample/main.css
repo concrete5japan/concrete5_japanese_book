@@ -7,6 +7,12 @@
 /**
  * Override Foundation styles
  */
+body{
+	position: inherit;
+}
+.page {
+	position: relative;
+}
 .page a:hover {
 	text-decoration: underline;
 }
