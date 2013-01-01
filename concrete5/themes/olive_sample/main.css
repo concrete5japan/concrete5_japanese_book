@@ -21,21 +21,11 @@ body{
 	font-weight: bold;
 	color: #5e7a36;
 }
-.page h1 {
-	font-size: 32px;
-}
-.page h2 {
-	font-size: 22px;
-}
-.page h3 {
-	font-size: 20px;
-}
-.page h4 {
-	font-size: 18px;
-}
-.page h5, .page h6 {
-	font-size: 16px;
-}
+h1 { font-size: 32px; }
+h2 { font-size: 22px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5, h6 { font-size: 16px; }
 .clearfix:before, .clearfix:after {
 	content: "";
 	display: table;
@@ -45,6 +35,26 @@ body{
 }
 .clearfix {
 	*zoom: 1;
+}
+.ccm-ui .tabs {
+	height: auto;
+}
+.ccm-ui .tabs li {
+	border-top: none;
+	margin-top: 0;
+}
+.ccm-ui .tabs li a {
+	font-size: inherit;
+	height: auto;
+	padding: 8px 12px;
+}
+.ccm-ui input, .ccm-ui textarea, .ccm-ui keygen, .ccm-ui select, .ccm-ui button,
+.ui-dialog input, .ui-dialog textarea, .ui-dialog keygen, .ui-dialog select, .ui-dialog button {
+	display: inline-block;
+	width: auto;
+}
+.ccm-ui select, .ui-dialog select {
+	width: auto;
 }
 
 /**
