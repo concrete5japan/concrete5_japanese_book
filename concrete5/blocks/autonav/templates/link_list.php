@@ -55,13 +55,15 @@ foreach ($navItems as $ni) {
 
 	if ($ni->isCurrent) {
 		//class for the page currently being viewed
-		$classes[] = 'nav-selected';
+		$classes[] = 'active';
 	}
-
+	
+	/*
 	if ($ni->inPath) {
 		//class for parent items of the page currently being viewed
 		$classes[] = 'nav-path-selected';
 	}
+	*/
 
 	/*
 	if ($ni->isFirst) {
@@ -110,7 +112,7 @@ foreach ($navItems as $ni) {
 
 //*** Step 2 of 2: Output menu HTML ***/
 
-echo '<ul class="nav">'; //opens the top-level menu
+echo '<ul class="link-list">'; //opens the top-level menu
 
 foreach ($navItems as $ni) {
 
