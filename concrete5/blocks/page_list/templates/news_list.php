@@ -6,7 +6,7 @@ $th = Loader::helper('text');
 //Note that $nh (navigation helper) is already loaded for us by the controller (for legacy reasons)
 ?>
 
-<div class="ccm-page-list">
+<div class="news-list hfeed">
 
 	<?php foreach ($pages as $page):
 
@@ -20,7 +20,7 @@ $th = Loader::helper('text');
 		$description = $th->entities($description);	
 		
 		//Other useful page data...
-		//$date = date('F j, Y', strtotime($page->getCollectionDatePublic()));
+		$date = date('Y年m月d日', strtotime($page->getCollectionDatePublic()));
 		//$last_edited_by = $page->getVersionObject()->getVersionAuthorUserName();
 		//$original_author = Page::getByID($page->getCollectionID(), 1)->getVersionObject()->getVersionAuthorUserName();
 		
@@ -48,11 +48,9 @@ $th = Loader::helper('text');
 		/* End data preparation. */
 
 		/* The HTML from here through "endforeach" is repeated for every item in the list... */ ?>
-		<h3 class="ccm-page-list-title">
-			<a href="<?php echo $url ?>" target="<?php echo $target ?>"><?php echo $title ?></a>
-		</h3>
-		<div class="ccm-page-list-description">
-			<?php echo $description ?>
+		<div class="hentry entry">
+			<div class="published"><?php echo $date ?></div>
+			<div class="entry-title"><a href="<?php echo $url ?>" target="<?php echo $target ?>" rel="bookmark"><?php echo $title ?></a></div>
 		</div>
 		
 	<?php endforeach; ?>
