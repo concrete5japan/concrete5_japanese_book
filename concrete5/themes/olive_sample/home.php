@@ -1,14 +1,9 @@
 <?php 
 defined('C5_EXECUTE') or die("Access Denied.");
-$this->inc('elements/header.php'); ?>
+$this->inc('elements/header_home.php'); ?>
 	
 	<div class="row">
-		<?php
-		$a = new GlobalArea('Breadcrumbs');
-		$a->display();
-		?>
-		<hr />
-		<section id="main" class="eight columns push-four" role="main">
+		<section id="main" class="eight columns" role="main">
 		
 			<?php 
 			$a = new Area('Main');
@@ -17,7 +12,7 @@ $this->inc('elements/header.php'); ?>
 			
 		</section>
 		
-		<aside class="sidebar four columns pull-eight" role="complementary">
+		<aside class="sidebar four columns" role="complementary">
 		
 			<?php 
 			$a = new Area('Sidebar');

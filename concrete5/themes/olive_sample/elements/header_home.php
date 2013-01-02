@@ -43,6 +43,15 @@
 			?>
 		</div>
 	</header>
+		
+	<section id="featured" class="row">
+		<div class="twelve columns">
+			<?php 
+			$a = new Area('Header');
+			$a->display($c);
+			?>
+		</div>
+	</section>
 	
 	<nav id="globalNav" class="row" role="navigation">
 		<div class="twelve columns clearfix">

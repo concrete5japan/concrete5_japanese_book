@@ -3,6 +3,11 @@ defined('C5_EXECUTE') or die("Access Denied.");
 $this->inc('elements/header.php'); ?>
 	
 	<div class="row">
+		<?php
+		$a = new GlobalArea('Breadcrumbs');
+		$a->display();
+		?>
+		<hr />
 		<section id="main" class="eight columns" role="main">
 		
 			<?php 
