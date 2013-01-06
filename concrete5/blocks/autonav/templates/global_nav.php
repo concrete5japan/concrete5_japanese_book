@@ -55,13 +55,15 @@ foreach ($navItems as $ni) {
 
 	if ($ni->isCurrent) {
 		//class for the page currently being viewed
-		$classes[] = 'nav-selected';
+		$classes[] = 'active';
 	}
 
+	/*
 	if ($ni->inPath) {
 		//class for parent items of the page currently being viewed
 		$classes[] = 'nav-path-selected';
 	}
+	*/
 
 	/*
 	if ($ni->isFirst) {
@@ -110,20 +112,44 @@ foreach ($navItems as $ni) {
 
 //*** Step 2 of 2: Output menu HTML ***/
 
-echo '<ul class="nav">'; //opens the top-level menu
+echo '<ul class="block-grid five-up hide-for-small">'; //opens the top-level menu
+
+foreach ($navItems as $ni) {
+	
+	$img_out = $ni->cObj->getAttribute('globalnav_image');
+	$img_over = $ni->cObj->getAttribute('globalnav_image_over');
+	
+	$img = $ni->name;
+	if (is_object($img_out) && is_object($img_over)) {
+		if ($ni->isCurrent) {
+			$img = '<img src="' . $img_over->getRelativePath() . '" alt="' . $ni->name . '" />';
+		} else {
+			$img = '<img src="' . $img_out->getRelativePath() . '" alt="' . $ni->name . '" onmouseover="this.src=\'' . $img_over->getRelativePath() . '\'" onmouseout="this.src=\'' . $img_out->getRelativePath() . '\'" />';
+		}
+	}
+
+	echo '<li class="' . $ni->classes . '">'; //opens a nav item
+
+	echo '<a href="' . $ni->url . '" target="' . $ni->target . '" class="' . $ni->classes . '">' . $img . '</a>';
+	
+	echo '</li>'; //closes a nav item
+
+}
+
+echo '</ul>'; //closes the top-level menu
+
+// output menu HTML for mobile
+
+echo '<ul class="nav-bar show-for-small">'; //opens the top-level menu
 
 foreach ($navItems as $ni) {
 
 	echo '<li class="' . $ni->classes . '">'; //opens a nav item
 
 	echo '<a href="' . $ni->url . '" target="' . $ni->target . '" class="' . $ni->classes . '">' . $ni->name . '</a>';
+	
+	echo '</li>'; //closes a nav item
 
-	if ($ni->hasSubmenu) {
-		echo '<ul>'; //opens a dropdown sub-menu
-	} else {
-		echo '</li>'; //closes a nav item
-		echo str_repeat('</ul></li>', $ni->subDepth); //closes dropdown sub-menu(s) and their top-level nav item(s)
-	}
 }
 
 echo '</ul>'; //closes the top-level menu
