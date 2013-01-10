@@ -1,14 +1,14 @@
 <?php	 defined('C5_EXECUTE') or die(_("Access Denied."));
 $navItems = $controller->getNavItems();
 
+echo '<ul class="breadcrumbs">';
+
 foreach ($navItems as $ni) {
-	if (!$ni->isFirst) {
-		echo ' <span class="ccm-autonav-breadcrumb-sep">&gt;</span> ';
-	}
-	
 	if ($ni->isCurrent) {
-		echo $ni->name;
+		echo '<li class="current"><span>' . $ni->name . '</span></li>';
 	} else {
-		echo '<a href="' . $ni->url . '" target="' . $ni->target . '">' . $ni->name . '</a>';
+		echo '<li><a href="' . $ni->url . '" target="' . $ni->target . '">' . $ni->name . '</a></li>';
 	}
 }
+
+echo '</ul>';
