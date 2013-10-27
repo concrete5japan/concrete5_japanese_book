@@ -67,12 +67,13 @@ $th = Loader::helper('text');
 
 
 <?php if ($showPagination): ?>
-	<div id="pagination">
-		<div class="ccm-spacer"></div>
-		<div class="ccm-pagination">
-			<span class="ccm-page-left"><?php echo $paginator->getPrevious('&laquo; ' . t('Previous')) ?></span>
-			<?php echo $paginator->getPages() ?>
-			<span class="ccm-page-right"><?php echo $paginator->getNext(t('Next') . ' &raquo;') ?></span>
-		</div>
-	</div>
+	<?php
+	// set current class name
+	$paginator->classCurrent = 'current';
+	?>
+	<ul id="pagination">
+		<li class="arrow"><?php echo $paginator->getPrevious('&laquo;','a') ?></li>
+		<?php echo $paginator->getPages('li') ?>
+		<li class="arrow"><?php echo $paginator->getNext('&raquo;','a') ?></li>
+	</ul>
 <?php endif; ?>
