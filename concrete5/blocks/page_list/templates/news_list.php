@@ -71,7 +71,7 @@ $th = Loader::helper('text');
 	// set current class name
 	$paginator->classCurrent = 'current';
 	?>
-	<ul id="pagination">
+	<ul class="pagination">
 		<li class="arrow"><?php echo $paginator->getPrevious('&laquo;','a') ?></li>
 		<?php echo $paginator->getPages('li') ?>
 		<li class="arrow"><?php echo $paginator->getNext('&raquo;','a') ?></li>
