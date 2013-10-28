@@ -116,14 +116,15 @@ echo '<ul class="block-grid five-up hide-for-small">'; //opens the top-level men
 
 foreach ($navItems as $ni) {
 	
-	$img_out = $ni->cObj->getAttribute('globalnav_image');
-	$img_over = $ni->cObj->getAttribute('globalnav_image_over');
+	// ページ属性（画像）を取得
+	$img_out = $ni->cObj->getAttribute('globalnav_image'); // ナビ画像
+	$img_over = $ni->cObj->getAttribute('globalnav_image_over'); // ナビ画像（hover）
 	
-	$img = $ni->name;
-	if ($img_out && $img_over) {
-		if ($ni->isCurrent) {
+	$img = $ni->name; // まず $img にページ名を代入
+	if ($img_out && $img_over) { // 画像が両方あるとき
+		if ($ni->isCurrent) { // 現在のページのとき
 			$img = '<img src="' . $img_over->getRelativePath() . '" alt="' . $ni->name . '" />';
-		} else {
+		} else { // 現在のページ以外のとき
 			$img = '<img src="' . $img_out->getRelativePath() . '" alt="' . $ni->name . '" onmouseover="this.src=\'' . $img_over->getRelativePath() . '\'" onmouseout="this.src=\'' . $img_out->getRelativePath() . '\'" />';
 		}
 	}
@@ -138,7 +139,7 @@ foreach ($navItems as $ni) {
 
 echo '</ul>'; //closes the top-level menu
 
-// output menu HTML for mobile
+// モバイル用のメニュー（画像なし）を出力
 
 echo '<ul class="nav-bar show-for-small">'; //opens the top-level menu
 
