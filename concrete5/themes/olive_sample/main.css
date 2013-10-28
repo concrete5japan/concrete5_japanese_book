@@ -36,6 +36,11 @@ h5, h6 { font-size: 16px; }
 .clearfix {
 	*zoom: 1;
 }
+.ccm-ui *, .ccm-ui *:before, .ccm-ui *:after {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
 .ccm-ui .tabs {
 	height: auto;
 }
