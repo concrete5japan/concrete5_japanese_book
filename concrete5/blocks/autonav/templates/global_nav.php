@@ -120,7 +120,7 @@ foreach ($navItems as $ni) {
 	$img_over = $ni->cObj->getAttribute('globalnav_image_over');
 	
 	$img = $ni->name;
-	if (is_object($img_out) && is_object($img_over)) {
+	if ($img_out && $img_over) {
 		if ($ni->isCurrent) {
 			$img = '<img src="' . $img_over->getRelativePath() . '" alt="' . $ni->name . '" />';
 		} else {
