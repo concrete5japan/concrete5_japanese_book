@@ -47,7 +47,8 @@
 	<nav id="globalNav" class="row" role="navigation">
 		<div class="twelve columns clearfix">
 			<?php 
-			$this->inc('elements/global_nav.php');
+			$a = new GlobalArea('Header Nav');
+			$a->display();
 			?>
 		</div>
 	</nav>
