@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<schema version="0.3">
+	<table name="btDCLunchMenu">
+		<field name="bID" type="I"><key /><unsigned /></field>
+
+		<field name="field_2_image_fID" type="I"></field>
+
+		<field name="field_4_image_fID" type="I"></field>
+		<field name="field_4_image_altText" type="C" size="255"></field>
+
+		<field name="field_6_textbox_text" type="X"></field>
+
+		<field name="field_7_textbox_text" type="X"></field>
+
+		<field name="field_9_textbox_text" type="X"></field>
+
+		<field name="field_10_textbox_text" type="X"></field>
+
+		<field name="field_11_textbox_text" type="X"></field>
+
+		<field name="field_12_textbox_text" type="X"></field>
+
+
+	</table>
+</schema>
