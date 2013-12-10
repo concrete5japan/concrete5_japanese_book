@@ -46,14 +46,14 @@ $ih = Loader::helper('image'); //<--uncomment this line if displaying image attr
 		 */
 		
 		$img = $page->getAttribute('thumbnail');
-		$img_src = $img->getRelativePath();
+		$thumb = $ih->getThumbnail($img, 208, 153, true);
 		
 		/* End data preparation. */
 
 		/* The HTML from here through "endforeach" is repeated for every item in the list... */ ?>
 		<div class="menu-item clearfix">
 			<div class="photo">
-				<a href="<?php echo $url ?>" target="<?php echo $target ?>"><img src="<?php echo $img_src ?>" alt="<?php echo $title ?>" /></a>
+				<a href="<?php echo $url ?>" target="<?php echo $target ?>"><img src="<?php echo $thumb->src ?>" alt="<?php echo $title ?>" /></a>
 			</div>
 			<div class="summary">
 				<h2><a href="<?php echo $url ?>" target="<?php echo $target ?>"><?php echo $title ?></a></h2>
