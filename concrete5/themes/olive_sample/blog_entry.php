@@ -1,5 +1,11 @@
 <?php 
 defined('C5_EXECUTE') or die("Access Denied.");
+
+/*
+書籍内ではBlog Entryテンプレートの解説はしていませんが、
+Greek Yogurtなど同梱テーマをもとに作成することができます。
+*/
+
 $this->inc('elements/header.php'); ?>
 	
 	<div class="row">
@@ -13,6 +19,11 @@ $this->inc('elements/header.php'); ?>
 			<h1><?php echo $c->getCollectionName(); ?></h1>
 		
 			<?php
+			/*
+			ページリストブロックのBlog Index Thumbnailテンプレートは、
+			ページ内の'Thumbnail Image'エリア内の画像ブロックの画像を表示するしくみになっています。
+			編集モードのときのみ'Thumbnail Image'エリアが現れるようになっています。
+			*/
 			if ($c->isEditMode()) {
 				$a = new Area('Thumbnail Image');
 				$a->display($c);
@@ -27,6 +38,9 @@ $this->inc('elements/header.php'); ?>
 			
 			<div id="main-content-post-author" class="panel">
 			<?php
+			/*
+			Greek Yogurtテーマのコードを流用して執筆者と日付を表示しています。
+			*/
 			$vo = $c->getVersionObject();
 			if (is_object($vo)) {
 				$uID = $vo->getVersionAuthorUserID();
