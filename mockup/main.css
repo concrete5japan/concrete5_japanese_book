@@ -1,12 +1,12 @@
 /**
- * Color Palett
- * border color: #698a3e
+ * Override Foundation base styles
  */
-
-
-/**
- * Override Foundation styles
- */
+body{
+	position: inherit;
+}
+.page {
+	position: relative;
+}
 .page a:hover {
 	text-decoration: underline;
 }
@@ -15,30 +15,51 @@
 	font-weight: bold;
 	color: #5e7a36;
 }
-.page h1 {
-	font-size: 32px;
-}
-.page h2 {
-	font-size: 22px;
-}
-.page h3 {
-	font-size: 20px;
-}
-.page h4 {
-	font-size: 18px;
-}
-.page h5, .page h6 {
-	font-size: 16px;
-}
-.clearfix:before, .clearfix:after {
+h1 { font-size: 24px; margin-bottom: 1em; }
+h2 { font-size: 18px; padding-bottom: .2em; border-bottom: 1px solid #698a3e; }
+h3 { font-size: 16px; padding-bottom: .2em; border-bottom: 1px solid #698a3e; }
+h4 { font-size: 15px; }
+h5, h6 { font-size: 14px; }
+.clearfix:before, .clearfix:after,
+.main-content-thumb:before, .main-content-thumb:after {
 	content: "";
 	display: table;
 }
-.clearfix:after {
+.clearfix:after,
+.main-content-thumb:after {
 	clear: both;
 }
-.clearfix {
+.clearfix, .main-content-thumb {
 	*zoom: 1;
+}
+
+/**
+ * Fixes broken ccm edit ui
+ */
+.ccm-ui *, .ccm-ui *:before, .ccm-ui *:after {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+.ccm-ui .tabs {
+	height: auto;
+}
+.ccm-ui .tabs li {
+	border-top: none;
+	margin-top: 0;
+}
+.ccm-ui .tabs li a {
+	font-size: inherit;
+	height: auto;
+	padding: 8px 12px;
+}
+.ccm-ui input, .ccm-ui textarea, .ccm-ui keygen, .ccm-ui select, .ccm-ui button,
+.ui-dialog input, .ui-dialog textarea, .ui-dialog keygen, .ui-dialog select, .ui-dialog button {
+	display: inline-block;
+	width: auto;
+}
+.ccm-ui select, .ui-dialog select {
+	width: auto;
 }
 
 /**
@@ -94,6 +115,30 @@
 #globalNav {
 	padding: 8px 0;
 }
+ul.breadcrumbs {
+	background: #f8f5f1;
+	border-color: #efece9;
+	margin-bottom: 24px;
+}
+ul.breadcrumbs a:link, ul.breadcrumbs a:visited {
+	color: #6c8c3b;
+}
+ul.breadcrumbs a:hover, ul.breadcrumbs a:active {
+	color: #ff8b02;
+}
+ul.breadcrumbs li {
+	background: transparent url(images/breadcrumbs_arrow.png) no-repeat center right;
+	padding-right: 24px;
+}
+ul.breadcrumbs li.current {
+	background-image: none;
+}
+ul.breadcrumbs li:before {
+	content: none;
+}
+ul.breadcrumbs li a, ul.breadcrumbs li span {
+	font-size: .9em;
+}
 
 /**
  * Main
@@ -124,16 +169,21 @@
 	padding: 5px;
 	float: left;
 }
+#main .menu-item .photo img {
+	margin: 0;
+}
 .page .menu-item .summary {
 	margin-left: 240px;
 }
 .page .menu-item .summary h3 {
 	font-size: 100%;
 	margin-bottom: .5em;
+	border: none;
 }
 .page .menu-item .menu-item-title {
 	margin: 0;
 	font-size: 26px;
+	border: none;
 }
 .page .read-more {
 	margin-bottom: 3em;
@@ -147,6 +197,22 @@
 	background-position-y: -45px;
 	color: #ff8b02;
 }
+.main-content-thumb h4 {
+	margin-top: 0;
+}
+.main-content-thumb h3 {
+	border: none;
+}
+#main .image-link {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 20px;
+}
+#main .image-link img {
+	margin: 0;
+	border: solid 1px #698a3e;
+	padding: 5px;
+}
 
 /**
  * Sidebar
@@ -155,8 +221,14 @@
 	font-style: normal;
 	font-size: 14px;
 }
+.sidebar h3 {
+	border: none;
+}
 .sidebar a:hover img {
 	opacity: 0.8;
+}
+.sidebar .side-nav {
+	padding-top: 0;
 }
 .ccm-tag-list li {
 	display: inline;
@@ -232,5 +304,10 @@
 	.page .menu-item .summary {
 		clear: left;
 		margin-left: 0;
+	}
+	#main .image-link {
+		float: none;
+		text-align: center;
+		margin-bottom: 10px;
 	}
 }
