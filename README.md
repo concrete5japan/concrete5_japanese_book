@@ -15,6 +15,8 @@ git clone https://github.com/concrete5japan/concrete5_japanese_book.git
 
 直感的に操作できるオープンソースCMS「concrete5」の基本、活用からカスタマイズ、運用まで徹底解説
 
+![concrete5 本格活用ガイドブック](https://raw.github.com/concrete5japan/concrete5_japanese_book/master/cover.png)
+
 著：猪上博史、 Katz Ueno、 榊友哉、 佐々木多生、 中根紳一、 菱川拓郎、 吉川智久  
 監修：concrete5 日本ユーザーグループ  
 価格：3,444円  
