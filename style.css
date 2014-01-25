@@ -2,3 +2,57 @@ body {
   padding-top: 30px;
   padding-bottom: 30px;
 }
+
+.container .jumbotron {
+	background: url(http://farm8.staticflickr.com/7030/6806010939_041f74eaaf_b.jpg) no-repeat left top;
+	padding: 100px 0 0;
+}
+.container .jumbotron header {
+	background: rgba(0,0,0,0.6);
+	border-radius: 0px 0px 6px 6px;
+	color: #ffffff;
+	padding: 10px 20px;
+}
+.container .jumbotron h1 {
+	font-size: 28px;
+}
+.container .jumbotron h2 {
+	font-size: 18px;
+}
+.container .jumbotron h1 span {
+	color: #22bbe5;
+}
+
+.book-iframe {
+	width: 100%;
+}
+
+.sidenav.affix {
+	top: 20px;
+	position: static;
+}
+.sidenav .active {
+	background: #eee;
+}
+
+@media screen and (min-width: 768px) {
+	.container .jumbotron header {
+		padding: 10px 60px;
+	}
+	.container .jumbotron h1 {
+		font-size: 36px;
+	}
+	.container .jumbotron h2 {
+		font-size: 24px;
+	}
+
+	.book-iframe {
+		float: right;
+		margin-left: 40px;
+	}
+	
+	.sidenav.affix {
+		width: 213px;
+		position: fixed;
+	}
+}

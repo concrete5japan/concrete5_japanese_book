@@ -10,43 +10,111 @@
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-<!-- Optional theme -->
-<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".sidenav">
 	<div class="container theme-showcase">
 		<div class="jumbotron">
-			<h1>concrete5本（仮称）</h1>
-		</div>
-		<div class="page-header">
-			<h1>サンプルウェブサイト</h1>
+			<header>
+				<h1>concrete<span>5</span> 公式活用ガイドブック</h1>
+				<h2>Chapter 04「オリジナルデザインのサイトを作る」サポートページ</h2>
+			</header>
 		</div>
 		<div class="row">
-			<div class="col-sm-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">HTMLモックアップ</h3>
-					</div>
-					<div class="panel-body">
-						<a href="./mockup/">HTMLモックアップ</a>
-					</div>
-				</div>
+			<div class="col-sm-3">
+				<nav class="sidenav" data-spy="affix" data-offset-top="262">
+					<ul class="nav well">
+						<li><a href="#book">書籍情報</a></li>
+						<li><a href="#view">サンプルウェブサイトを実際に見る</a></li>
+						<li><a href="#download">データダウンロード</a></li>
+						<li><a href="#license">ライセンス</a></li>
+						<li><a href="#link">リンク</a></li>
+					</ul>
+				</nav>
 			</div>
-			<div class="col-sm-6">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">concrete5サイト</h3>
+			<div class="col-sm-9">
+				<section id="book" class="clearfix">
+					<div class="page-header">
+						<h3>書籍情報</h3>
 					</div>
-					<div class="panel-body">
-						<a href="./concrete5/">concrete5サイト</a>
+					<div class="row">
+						<div class="col-sm-8">
+							<p class="lead">直感的に操作できるオープンソースCMS<br>「concrete5」の基本、活用からカスタマイズ、運用まで徹底解説</p>
+							<p>concrete5（コンクリートファイブ）はオープンソースのコンテンツ管理システム（CMS）で、編集の自由度の高さや使いやすさ、デザインカスタマイズの容易さ、機能拡張の柔軟さなどが注目され、ユーザー数を伸ばし続けています。<br />本書はconcrete5のコミュニティメンバーが執筆した、初の日本語公式書籍となります。</p>
+							<p>concrete5をこれから使い始める方や興味のある方だけでなく、すでにお使いのデザイナーや開発者の方にも役立つよう、章ごとにテーマを決めて、解説を行っています。</p>
+						</div>
+						<div class="col-sm-4">
+							<iframe class="book-iframe" src="https://book.mynavi.jp/ec_products_detail_html/id=24448" frameborder="0" width="280" height="300" scrolling="yes"></iframe>
+						</div>
+				</section>
+				<section id="view">
+					<div class="page-header">
+						<h3>サンプルウェブサイト</h3>
 					</div>
-				</div>
+					<p>『concrete5 公式活用ガイドブック』Chapter 04では、こちらのHTMLモックアップをconcrete5のサイトとして制作する方法を解説しています。</p>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">HTMLモックアップ</h3>
+						</div>
+						<div class="panel-body">
+							<p>HTML, CSS, Javascriptで制作したサイトの雛形です。</p>
+							<p><a class="btn btn-default" href="./mockup/" target="_blank">見る</a></p>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">concrete5サイト</h3>
+						</div>
+						<div class="panel-body">
+							<p>モックアップを元にテーマとカスタムテンプレートを作成し、コンテンツを登録したサンプルウェブサイトです。</p>
+							<p><a class="btn btn-default" href="./concrete5/" target="_blank">見る</a></p>
+						</div>
+					</div>
+				</section>
+				<section id="download">
+					<div class="page-header">
+						<h3>データダウンロード</h3>
+					</div>
+					<p>HTMLモックアップとconcrete5のサンプルサイトで使用しているデータの全てを、書籍を購入した方でなくても自由にダウンロードすることができます。ソースコードがどのようにカスタマイズされているのかについてはぜひ書籍の解説をご覧ください。</p>
+					<p><a class="btn btn-primary" href="https://github.com/concrete5japan/concrete5_japanese_book/archive/master.zip">GitHubからダウンロードする</a></p>
+					<p><iframe src="http://ghbtns.com/github-btn.html?user=concrete5japan&repo=concrete5_japanese_book&type=watch&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe> <iframe src="http://ghbtns.com/github-btn.html?user=concrete5japan&type=follow&count=true"
+  allowtransparency="true" frameborder="0" scrolling="0" width="165" height="20"></iframe></p>
+				</section>
+				<section id="license">
+					<div class="page-header">
+						<h3>ライセンス</h3>
+					</div>
+					<p><code>concrete5/concrete</code>ディレクトリ内の<a href="http://www.concrete5.org/" target="_blank">concrete5</a>のソースコードの著作権はConcrete CMS Inc.が有し、MITライセンスで公開されています。<code>mockup</code>ディレクトリならびに<code>concrete5/themes</code>ディレクトリ内ではフロントエンドフレームワークとして<a href="http://foundation.zurb.com/" target="_blank">Foundation</a>を使用しています。Foundationの著作権はZURB, inc.が有し、MITライセンスで公開されています。その他<a href="http://jquery.com/">jQuery</a>等の外部ライブラリもそれぞれのライセンスで公開されています。</p>
+					<p>上記に該当しないソースコードは、下記作者が著作権を有し、同じくMITライセンスで公開しています。ただし、レポジトリ内の写真素材は全てコンクリートファイブジャパン株式会社が使用ライセンスを取得し、『concrete5公式活用ガイドブック』の解説のために配布しています。書籍のチュートリアルを実践する以外の目的での使用、複製、再配布を禁じます。</p>
+					<h4>作者</h4>
+					<ul>
+						<li>@<a href="https://github.com/nipper-onside">nipper-onside</a> (Design)</li>
+						<li>@<a href="https://github.com/acliss19xx">acliss19xx</a></li>
+						<li>@<a href="https://github.com/hissy">hissy</a></li>
+					</ul>
+				</section>
+				<section id="link">
+					<div class="page-header">
+						<h3>リンク</h3>
+					</div>
+					<ul>
+						<li>マイナビ 書籍サポートサイト（準備中）</li>
+						<li><a href="http://concrete5-japan.org/" target="_blank">concrete5 Japan 日本語公式サイト</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<small>Copyright &copy; concrete5 Japan. Photo <a href="http://www.flickr.com/photos/erix/6806010939/">by erix!, on Flickr</a></small>
 			</div>
 		</div>
 	</div>
 </body>
+
+<script src="http://code.jquery.com/jquery.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 </html>
