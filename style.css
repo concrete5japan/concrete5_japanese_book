@@ -5,6 +5,7 @@ body {
 
 .container .jumbotron {
 	background: url(http://farm8.staticflickr.com/7030/6806010939_041f74eaaf_b.jpg) no-repeat left top;
+	background-size: cover;
 	padding: 100px 0 0;
 }
 .container .jumbotron header {
@@ -35,7 +36,7 @@ body {
 	background: #eee;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width:768px) {
 	.container .jumbotron header {
 		padding: 10px 60px;
 	}
@@ -45,12 +46,20 @@ body {
 	.container .jumbotron h2 {
 		font-size: 24px;
 	}
-
 	.book-iframe {
 		float: right;
 		margin-left: 40px;
 	}
-	
+}
+
+@media (min-width:768px) and (max-width:991px) {
+	.sidenav.affix {
+		width: 158px;
+		position: fixed;
+	}
+}
+
+@media (min-width:992px) {
 	.sidenav.affix {
 		width: 213px;
 		position: fixed;
