@@ -58,7 +58,7 @@
 				<div class="fb-like" data-href="http://book.concrete5-japan.org/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div>
 				<a href="http://b.hatena.ne.jp/entry/http://book.concrete5-japan.org/" class="hatena-bookmark-button" data-hatena-bookmark-title="concrete5 公式活用ガイドブック サンプルデータダウンロード＆サポートページ" data-hatena-bookmark-layout="standard-balloon" data-hatena-bookmark-lang="ja" title="このエントリーをはてなブックマークに追加"><img src="http://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a>
 				<hr />
-				<p>このページは、書籍『concrete5 公式活用ガイドブック』の購入者に向けた補足情報の提供、Chapter 04「オリジナルデザインのサイトを作る」で使用するサンプルサイトのデータをダウンロードできるページです。</p>
+				<p>このページは、書籍『concrete5 公式活用ガイドブック』の購入者を対象としたページです。Chapter 04「オリジナルデザインのサイトを作る」で使用するサンプルサイトのデータをダウンロードできるほか、書籍の補足情報を掲載していきます。</p>
 				<section id="book" class="clearfix">
 					<div class="page-header">
 						<h3>書籍情報</h3>
@@ -78,22 +78,28 @@
 						<h3>サンプルウェブサイト</h3>
 					</div>
 					<p>『concrete5 公式活用ガイドブック』Chapter 04では、こちらのHTMLモックアップをconcrete5のサイトとして制作する方法を解説しています。</p>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">HTMLモックアップ</h3>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">HTMLモックアップ</h3>
+								</div>
+								<div class="panel-body">
+									<p>HTML, CSS, Javascriptで制作したサイトの雛形です。</p>
+									<p><a class="btn btn-default" href="./mockup/" target="_blank">見る</a></p>
+								</div>
+							</div>
 						</div>
-						<div class="panel-body">
-							<p>HTML, CSS, Javascriptで制作したサイトの雛形です。</p>
-							<p><a class="btn btn-default" href="./mockup/" target="_blank">見る</a></p>
-						</div>
-					</div>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-							<h3 class="panel-title">concrete5サイト</h3>
-						</div>
-						<div class="panel-body">
-							<p>モックアップを元にテーマとカスタムテンプレートを作成し、コンテンツを登録したサンプルウェブサイトです。</p>
-							<p><a class="btn btn-default" href="./concrete5/" target="_blank">見る</a></p>
+						<div class="col-sm-6">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">concrete5サイト</h3>
+								</div>
+								<div class="panel-body">
+									<p>モックアップを元にテーマとカスタムテンプレートを作成し、コンテンツを登録したサンプルウェブサイトです。</p>
+									<p><a class="btn btn-default" href="./concrete5/" target="_blank">見る</a></p>
+								</div>
+							</div>
 						</div>
 					</div>
 				</section>
@@ -111,19 +117,15 @@
 					<div class="page-header">
 						<h3>動画</h3>
 					</div>
-					<p>書籍では紙面というメディアの関係上伝えきれなかった内容を補足する動画をアップしてきたいと思います。</p>
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="panel panel-default">
-								<div class="panel-heading">
-									<h3 class="panel-title">サンプルサイトのコンテンツ登録デモ</h3>
-								</div>
-								<div class="panel-body">
-									<p>本書で作成したテーマを適用したサイトにコンテンツを登録し、デザインを再現していく手順のデモ動画です。</p>
-									<div class="video-container">
-										準備中
-									</div>
-								</div>
+					<p>書籍では紙面というメディアの関係上伝えきれなかった内容を補足する動画をアップしていきます。</p>
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3 class="panel-title">サンプルサイトのコンテンツ登録デモ</h3>
+						</div>
+						<div class="panel-body">
+							<p>本書で作成したテーマを適用したサイトにコンテンツを登録し、デザインを再現していく手順のデモ動画です。</p>
+							<div class="video-container">
+								<iframe width="560" height="315" src="http://www.youtube.com/embed/r7vfTwZut8c" frameborder="0" allowfullscreen></iframe>
 							</div>
 						</div>
 					</div>
@@ -287,10 +289,16 @@
 					<div class="page-header">
 						<h3>リンク</h3>
 					</div>
-					<ul>
-						<li><a href="https://book.mynavi.jp/support/pc/4384/" target="_blank">マイナビ 書籍サポートサイト</a>：誌面の訂正情報について掲載していきます。</a></li>
-						<li><a href="http://concrete5-japan.org/" target="_blank">concrete5 Japan 日本語公式サイト</a></li>
-					</ul>
+					<dl>
+						<dt><a href="https://book.mynavi.jp/support/pc/4384/" target="_blank">マイナビ 書籍サポートサイト</a> <span class="glyphicon glyphicon-new-window"></span></dt>
+						<dd>誌面の訂正情報について掲載していきます。</dd>
+						<dt><a href="http://concrete5-japan.org/" target="_blank">concrete5 Japan 日本語公式サイト</a> <span class="glyphicon glyphicon-new-window"></span></dt>
+						<dd>concrete5日本語コミュニティの公式サイトです。</dd>
+						<dt><a href="http://concrete5-japan.org/help/install/" target="_blank">concrete5インストール方法 - concrete5 Japan 日本語公式サイト</a> <span class="glyphicon glyphicon-new-window"></span></dt>
+						<dd>書籍で解説している以外のホスティング会社別のインストール方法や、過去のバージョンからのアップグレード方法について掲載しています。</dd>
+						<dt><a href="http://concrete5-japan.org/community/forums/" target="_blank">フォーラム - concrete5 Japan 日本語公式サイト</a> <span class="glyphicon glyphicon-new-window"></span></dt>
+						<dd>会員登録すると、フォーラムで質問を投稿することができます。フォーラムでは、有志のメンバーが質問に回答しています。 <a href="http://concrete5-japan.org/community/terms-of-use/" target="_blank">利用規約</a></dd>
+					</dl>
 				</section>
 			</div>
 		</div>

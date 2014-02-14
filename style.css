@@ -3,6 +3,10 @@ body {
   padding-bottom: 30px;
 }
 
+dd {
+	margin-bottom: .8em;
+}
+
 .container .jumbotron {
 	background: url(http://farm8.staticflickr.com/7030/6806010939_041f74eaaf_b.jpg) no-repeat left top;
 	background-size: cover;
