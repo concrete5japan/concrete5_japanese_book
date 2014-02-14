@@ -11,6 +11,8 @@
 git clone https://github.com/concrete5japan/concrete5_japanese_book.git
 ```
 
+* または、[サポートページ](http://book.concrete5-japan.org/)からもデータをダウンロードすることができます。サポートページでは、ダウンロードデータ以外にも、書籍の購入者に向けた補足情報などを掲載しています。
+
 ## 書籍情報
 
 直感的に操作できるオープンソースCMS「concrete5」の基本、活用からカスタマイズ、運用まで徹底解説
@@ -64,5 +66,5 @@ concrete5のソースコードの著作権はConcrete CMS Inc.が有し、MITラ
 
 ## リンク
 
-- マイナビ 書籍サポートサイト（準備中）
-- [concrete5 Japan 日本公式サイト](http://concrete5-japan.org)
+* [マイナビ 書籍サポートサイト](https://book.mynavi.jp/support/pc/4384/)
+* [concrete5 Japan 日本公式サイト](http://concrete5-japan.org)
