@@ -68,3 +68,7 @@ concrete5のソースコードの著作権はConcrete CMS Inc.が有し、MITラ
 
 * [マイナビ 書籍サポートサイト](https://book.mynavi.jp/support/pc/4384/)
 * [concrete5 Japan 日本公式サイト](http://concrete5-japan.org)
+
+# コントリビューターへお願い
+
+`customizable-theme` ブランチは、テーマカスタマイズ機能に対応させたテーマのサンプルをメンテしています。書籍ではテーマカスタマイズ機能への対応はTips扱いなので、 `master` にマージしないでください。
