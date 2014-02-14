@@ -12,7 +12,8 @@
 	<meta name="viewport" content="width=device-width" />
 	
 	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/stylesheets/foundation.min.css">
-	<link rel="stylesheet" href="<?php echo $this->getThemePath(); ?>/main.css">
+	<link rel="stylesheet" href="<?php echo $this->getStyleSheet('main.css'); ?>">
+	<link rel="stylesheet" href="<?php echo $this->getStyleSheet('typography.css'); ?>">
 
 	<script src="<?php echo $this->getThemePath(); ?>/javascripts/modernizr.foundation.js"></script>
 </head>
