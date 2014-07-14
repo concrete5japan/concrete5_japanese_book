@@ -55,7 +55,16 @@ dd {
     width: 100%;
     height: 100%;
 }
-- See more at: http://avexdesigns.com/responsive-youtube-embed/#sthash.m9LWamj9.dpuf
+/* See more at: http://avexdesigns.com/responsive-youtube-embed/#sthash.m9LWamj9.dpuf */
+
+.table tbody>tr>td.level { white-space: nowrap; }
+.table tbody>tr>td.level-0 { padding-left: 13px; }
+.table tbody>tr>td.level-1 { padding-left: 26px; }
+.table tbody>tr>td.level-2 { padding-left: 39px; }
+.table tbody>tr>td.level-3 { padding-left: 52px; }
+.table tbody>tr>td.level-4 { padding-left: 65px; }
+.table tbody>tr>td.level-5 { padding-left: 78px; }
+.table tbody>tr>td.level-6 { padding-left: 91px; }
 
 @media (min-width:768px) {
 	.container .jumbotron header {
